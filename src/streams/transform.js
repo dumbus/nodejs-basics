@@ -1,5 +1,8 @@
 import { Transform, pipeline } from 'node:stream';
 import { stdin, stdout } from 'node:process';
+import { promisify } from 'node:util';
+
+const pipelinePromisified = promisify(pipeline);
 
 const transform = async () => {
     const reversingStream = new Transform({
@@ -13,14 +16,13 @@ const transform = async () => {
         }
     });
 
-    pipeline(
+    await pipelinePromisified(
         stdin,
         reversingStream,
-        stdout,
-        error => {
-            console.log(error);
-        }
-    );
+        stdout
+    ).catch(error => {
+        console.log(error);
+    });
 };
 
 await transform();
