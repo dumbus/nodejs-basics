@@ -18,7 +18,7 @@ git clone https://github.com/dumbus/node-nodejs-basics.git
 ```
 ### 2. Change active directory:
 ```
-cd crud-api
+cd rsschool-node
 ```
 ### 3. Install dependencies:
 ```
