@@ -14,11 +14,11 @@ This repository was made to learn the basics of NodeJS.
 
 ### 1. Clone repository:
 ```
-git clone https://github.com/dumbus/node-nodejs-basics.git
+git clone https://github.com/dumbus/nodejs-basics.git
 ```
 ### 2. Change active directory:
 ```
-cd rsschool-node
+cd nodejs-basics
 ```
 ### 3. Install dependencies:
 ```
